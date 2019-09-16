@@ -18,21 +18,21 @@ To the video you produced for Challenge 1, overlay an alert if the truck too clo
 Train your own model, generate your own weights and redo Challenge 1 and Challenge 2.
 
 #### Input (for all challenges) ####
-* [`osha.mp4`](https://github.com/mnemonist/cisco-ghc-hackathon/blob/master/dataset/video/osha.mp4): Safety training video.
-  * We have split the video into frames and these frames are in the [`dataset/images`](https://github.com/mnemonist/cisco-ghc-hackathon/tree/master/dataset/images) directory.
+* [`osha.mp4`](https://github.com/mnemonist/cisco-ghc-hackathon/tree/master/Problem4/dataset/video): Safety training video.
+  * We have split the video into frames and these frames are in the [`dataset/images`](https://github.com/mnemonist/cisco-ghc-hackathon/tree/master/Problem4/dataset/images) directory.
   * You are welcome to use these images as your imput for Challenge 1 and Challenge 2.
   * Note that for Challenge 3, you have to use these images so the bounding boxes from your solution can be checked and evaluated against our solution.
 
 #### Output ####
 * Reproduced Safety Training Video with bounding boxes around objects of interest and an alert when the human is in danger because of a potential truck back-over.
-  * Please see our sample output in the [`sample_solution`](https://github.com/mnemonist/cisco-ghc-hackathon/tree/master/sample_solution) directory.
+  * Please see our sample output in the [`sample_solution`](https://github.com/mnemonist/cisco-ghc-hackathon/tree/master/Problem4/sample_solution) directory.
 
 #### Submission ####
 * A zip file with the following:
   * Your reproduced video from Challenge 2 in `.mp4` format
   * Your reproduced video from Challenge 3 in `.mp4` format 
-  * For Challenge 3, in addition to the video, please provide bounding boxes for every frame in the [dataset](https://github.com/mnemonist/cisco-ghc-hackathon/tree/master/dataset/images) in JSON format.
-    * Please see an example shown in [`sample_bounding_boxes.json`](https://github.com/mnemonist/cisco-ghc-hackathon/blob/master/sample_solution/sample_bounding_boxes.json) on how to format your JSON output.
+  * For Challenge 3, in addition to the video, please provide bounding boxes for every frame in the [dataset](https://github.com/mnemonist/cisco-ghc-hackathon/tree/master/Problem4/dataset/images) in JSON format.
+    * Please see an example shown in [`sample_bounding_boxes.json`](https://github.com/mnemonist/cisco-ghc-hackathon/blob/master/Problem4/sample_solution/sample_bounding_boxes.json) on how to format your JSON output.
 
 #### Scoring ####
 Your score will be based on [Intersection over Union metric.](https://www.pyimagesearch.com/2016/11/07/intersection-over-union-iou-for-object-detection/)
@@ -47,7 +47,7 @@ Your score will be based on [Intersection over Union metric.](https://www.pyimag
 
 ### Challenge 1 ###
 
-We've provided 900 frames extracted from `osha.mp4` in `frames` to help you get started. In addition, we have provided selected [files](https://github.com/mnemonist/cisco-ghc-hackathon/tree/master/challenge1and2) from Andy Yun's [pytorch-0.4-yolov3 repo](https://github.com/andy-yun/pytorch-0.4-yolov3). This repo provides a Pytorch based implementation of the YOLO v3 object detection algorithm. This challenge can be solved by modifying detect.py.
+We've provided 900 frames extracted from `osha.mp4` in `frames` to help you get started. In addition, we have provided selected [files](https://github.com/mnemonist/cisco-ghc-hackathon/tree/master/Problem4/challenge1and2) from Andy Yun's [pytorch-0.4-yolov3 repo](https://github.com/andy-yun/pytorch-0.4-yolov3). This repo provides a Pytorch based implementation of the YOLO v3 object detection algorithm. This challenge can be solved by modifying detect.py.
 * `detect.py`: YOLO v3 object detection algorithm
 	* Dependencies (don't need to modify for this Challenge!):
 		* `cfg.py`
@@ -66,7 +66,7 @@ Read through `detect.py`'s dependency files -- see if you can figure out which f
 
 ### Challenge 3 ###
 
-In addition to the images in [dataset/images](https://github.com/mnemonist/cisco-ghc-hackathon/tree/master/dataset/images), use these file in the [dataset/labels](https://github.com/mnemonist/cisco-ghc-hackathon/tree/master/dataset/labels) directory:
+In addition to the images in [dataset/images](https://github.com/mnemonist/cisco-ghc-hackathon/tree/master/Problem4/dataset/images), use these file in the [dataset/labels](https://github.com/mnemonist/cisco-ghc-hackathon/tree/master/Problem4/dataset/labels) directory:
 * `osha_train.txt`: a text file with training data file names
 * `osha_valid.txt`: a text file with validation data file names
 * `lables.json`: a JSON file containing object ids and box coordinates
